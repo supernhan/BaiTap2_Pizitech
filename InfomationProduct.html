@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông Tin Sản Phẩm</title>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("info_img");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./css/InfomationProduct.css" />
+    <div class="mainframe">
+      <div class="header">
+        <div class="nav_header">
+          <a href="./start.html">
+            <img src="./img/logo.png" alt="logo" class="img_logo" />
+          </a>
+          <div class="nav_menu">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="./IndexHome.html" style="text-decoration: none"
+                  >Trang Chủ</a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="./aboutus.html" style="text-decoration: none"
+                  >Giới Thiệu</a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="./Contact.html" style="text-decoration: none"
+                  >Liên Hệ</a
+                >
+              </li>
+              <li class="nav_item-other">
+                <a href="./shop.html" style="text-decoration: none">Cửa Hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav_icon">
+            <a href="./profile.html"
+              ><img src="./img/icon_profile.png" alt="icon_profile"
+            /></a>
+            <a href="./cart.html"
+              ><img src="./img/icon_shop.png" alt="icon_shop"
+            /></a>
+          </div>
+          <img src="./img/danhmuc.png" alt="" class="icon_danhmuc" />
+        </div>
+
+        <div class="frame_infomation">
+          <div class="infomation_component">
+            <div class="text_component-gen">
+              <div class="text_component">Cửa hàng</div>
+              <div class="icon_component">></div>
+              <div class="text_component">Bộ trà/ Cafe</div>
+              <div class="icon_component">></div>
+              <div class="text_component">Tên Sản Phẩm</div>
+            </div>
+
+            <div class="infomation_gird">
+              <div class="infomation_gird-left">
+                <img src="./img/hoang cung.png" alt="" width="100%" />
+                <div class="gird_left-low">
+                  <img src="./img/binhtranho.png" alt="hinhanh" width="100%" />
+                  <img src="./img/binhtranho.png" alt="hinhanh" width="100%" />
+                  <img src="./img/binhtranho.png" alt="hinhanh" width="100%" />
+                  <img src="./img/binhtranho.png" alt="hinhanh" width="100%" />
+                </div>
+              </div>
+              <div class="infomation_gird-right">
+                <div class="title_right">
+                  Bộ trà 1.3 L - Hoàng Cung - Lạc Hồng
+                </div>
+                <div class="infotext_right">Mã Sản Phẩm: 01134020803</div>
+                <div class="infotext_right">Thương hiệu: Minh Long I</div>
+                <div class="infotext_right">Hoa văn: Lạc Hồng</div>
+                <div class="line_right"></div>
+                <div class="cash_right">3.730.000 VNĐ</div>
+                <div class="line_right"></div>
+                <div class="frame_soluong">
+                  <div class="text_soluong">Số lượng:</div>
+                  <img src="./img/add_btn.png" alt="add" />
+                  <div class="number_btn">1</div>
+                  <img src="./img/ph--minus-fill.png" alt="" />
+                  <img src="./img/icon_shop.png" alt="shop" class="icon_shop" />
+                  <img src="./img/buy.png" alt="buy" class="icon_component" />
+                </div>
+                <div class="frame_danhgia">
+                  <div class="text_soluong">Đánh giá:</div>
+                  <div class="icon_star">
+                    <img src="./img/star-outline.png" alt="" />
+                    <img src="./img/star-outline.png" alt="" />
+                    <img src="./img/star-outline.png" alt="" />
+                    <img src="./img/star-outline.png" alt="" />
+                    <img src="./img/star-outline.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="frame_description">
+          <div class="title_description">Mô Tả Sản Phẩm</div>
+          <div class="background_des">
+            Daisy trắng có thiết kế đơn giản, không cầu kỳ nhưng vẫn giữ được
+            nét sang trọng và thanh lịch hiếm thấy ở những sản phẩm khác. Mỗi
+            chiếc đĩa, tô, chén… đều được tạo hình cân đối, tròn đều, không một
+            vết trầy xước. Sản phẩm được nung ở nhiệt độ cao theo công nghệ của
+            Đức, không chì, camidium, an toàn tuyệt đối cho người sử dụng.
+          </div>
+        </div>
+
+        <div class="frame_table">
+          <div class="title_table">THÔNG TIN SẢN PHẨM</div>
+          <div class="info_table">
+            <div class="gird_table">
+              <div class="info_text">Chiều dài</div>
+              <div class="info_text">11,50 cm / 4,53 inch</div>
+              <div class="info_text">Chiều rộng</div>
+              <div class="info_text">11,50 cm / 4,53 inch</div>
+              <div class="info_text">Chiều cao</div>
+              <div class="info_text">11,50 cm / 4,53 inch</div>
+              <div class="info_text">Trọng lượng</div>
+              <div class="info_text">201 gram</div>
+              <div class="info_text">Màu sắc</div>
+              <div class="info_text">Trắng</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="frame_info-product">
+          <h1 class="title_newproduct">Sản Phẩm Thương Hiệu</h1>
+          <div class="frame_img-newproduct">
+            <div class="img_product">
+              <div class="frame_gird-newproduct">
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/sago vang.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO MẪU ĐƠN VÀNG
+                  </div>
+                  <div class="cash_product">2.230.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/Jasminequadaumua.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ TRÀ 0.7L - JASMINE QUẢ ĐẦU MÙA
+                  </div>
+                  <div class="cash_product">858.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/sago thien tue.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO THIÊN TUẾ XANH KHẮC NỔI
+                  </div>
+                  <div class="cash_product">3.624.500 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/cafe phin.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ PHIN - CAMELLIA MÀU CÀ PHÊ
+                  </div>
+                  <div class="cash_product">935.000 VNĐ</div>
+                </div>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+        <div style="text-align: center" class="chuyen">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <div class="frame_info-product">
+          <h1 class="title_newproduct">Sản Phẩm Danh Mục</h1>
+          <div class="frame_img-newproduct">
+            <div class="img_product">
+              <div class="frame_gird-newproduct">
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/sago vang.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO MẪU ĐƠN VÀNG
+                  </div>
+                  <div class="cash_product">2.230.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/Jasminequadaumua.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ TRÀ 0.7L - JASMINE QUẢ ĐẦU MÙA
+                  </div>
+                  <div class="cash_product">858.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/sago thien tue.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO THIÊN TUẾ XANH KHẮC NỔI
+                  </div>
+                  <div class="cash_product">3.624.500 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/cafe phin.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ PHIN - CAMELLIA MÀU CÀ PHÊ
+                  </div>
+                  <div class="cash_product">935.000 VNĐ</div>
+                </div>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+        <div style="text-align: center" class="chuyen">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <div class="frame_info-product">
+          <h1 class="title_newproduct">Sản Phẩm Đã Xem</h1>
+          <div class="frame_img-newproduct">
+            <div class="img_product">
+              <div class="frame_gird-newproduct">
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/sago vang.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO MẪU ĐƠN VÀNG
+                  </div>
+                  <div class="cash_product">2.230.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/Jasminequadaumua.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ TRÀ 0.7L - JASMINE QUẢ ĐẦU MÙA
+                  </div>
+                  <div class="cash_product">858.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/sago thien tue.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO THIÊN TUẾ XANH KHẮC NỔI
+                  </div>
+                  <div class="cash_product">3.624.500 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/cafe phin.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ PHIN - CAMELLIA MÀU CÀ PHÊ
+                  </div>
+                  <div class="cash_product">935.000 VNĐ</div>
+                </div>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+        <div style="text-align: center" class="chuyen">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <img src="./img/logo.png" alt="" class="footer_logo" />
+      <div class="frame_menu">
+        <a href="./index.html" style="text-decoration: none"
+          ><h3 class="name_menu">Trang Chủ</h3></a
+        >
+        <a href="./aboutus.html" style="text-decoration: none"
+          ><h3 class="name_menu">Giới Thiệu</h3></a
+        >
+        <a href="./Contact.html" style="text-decoration: none"
+          ><h3 class="name_menu">Liên Hệ</h3></a
+        >
+        <a href="#" style="text-decoration: none"
+          ><h3 class="name_menu">Cửa Hàng</h3></a
+        >
+      </div>
+      <div class="mxh_footer">
+        <a href="https://www.instagram.com/"
+          ><img src="./img/instagram.png" alt="instagram"
+        /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="./img/facebook.png" alt="facebook"
+        /></a>
+        <a href=""><img src="./img/in.png" alt="in" /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="./img/youtube.png" alt="youtube"
+        /></a>
+      </div>
+      <div class="text_footer">
+        © COPYRIGHT SITENAME. ALL RIGHTS RESERVED POWERED by CREATE ECOMMERCE
+      </div>
+    </div>
+  </body>
+</html>

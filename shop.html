@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cửa Hàng</title>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("info_img");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./css/shop.css" />
+    <div class="mainframe">
+      <div class="header">
+        <div class="nav_header">
+          <a href="./start.html">
+            <img src="./img/logo.png" alt="logo" class="img_logo" />
+          </a>
+          <div class="nav_menu">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="./IndexHome.html" style="text-decoration: none"
+                  >Trang Chủ</a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="./aboutus.html" style="text-decoration: none"
+                  >Giới Thiệu</a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="./Contact.html" style="text-decoration: none"
+                  >Liên Hệ</a
+                >
+              </li>
+              <li class="nav_item-other">
+                <a href="#" style="text-decoration: none">Cửa Hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav_icon">
+            <a href="./profile.html"
+              ><img src="./img/icon_profile.png" alt="icon_profile"
+            /></a>
+            <a href="./cart.html"
+              ><img src="./img/icon_shop.png" alt="icon_shop"
+            /></a>
+          </div>
+          <img src="./img/danhmuc.png" alt="" class="icon_danhmuc" />
+        </div>
+
+        <div class="frame_info">
+          <h1 class="title_newproduct">Sản Phẩm Mới</h1>
+          <div class="frame_img-newproduct">
+            <div class="img_product">
+              <div class="frame_gird-newproduct">
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/sago vang.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO MẪU ĐƠN VÀNG
+                  </div>
+                  <div class="cash_product">2.230.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/Jasminequadaumua.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ TRÀ 0.7L - JASMINE QUẢ ĐẦU MÙA
+                  </div>
+                  <div class="cash_product">858.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/sago thien tue.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ 0.8L - SAGO THIÊN TUẾ XANH KHẮC NỔI
+                  </div>
+                  <div class="cash_product">3.624.500 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/cafe phin.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ PHIN - CAMELLIA MÀU CÀ PHÊ
+                  </div>
+                  <div class="cash_product">935.000 VNĐ</div>
+                </div>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+        <div style="text-align: center" class="chuyen">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <div class="frame_fixed">
+          <div class="list_container" id="list-content">
+            <div class="action_list" id="menu-list-remove">
+              <img src="./img/danhmuc.png" alt="" class="img_fixed" />
+            </div>
+          </div>
+        </div>
+
+        <div class="frame_info">
+          <h1 class="title_newproduct">Sản Phẩm Bán Chạy</h1>
+          <div class="frame_img-newproduct">
+            <div class="img_product">
+              <div class="frame_gird-newproduct">
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img
+                      src="./img/hu tra an nhien.png"
+                      alt="hinhanh"
+                      width="100%"
+                  /></a>
+                  <div class="name_product">BỘ TRÀ - HŨ TRÀ AN NHIÊN</div>
+                  <div class="cash_product">1.799.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/sac hoa .png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">BÌNH HOA 26CM - SẮC HOA</div>
+                  <div class="cash_product">3.498.000 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/3bo thuong.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">BỘ CHÉN DĨA 0.8L - SAGO</div>
+                  <div class="cash_product">3.624.500 VNĐ</div>
+                </div>
+                <div class="info_img">
+                  <a href="./InfomationProduct.html"
+                    ><img src="./img/cafe phin.png" alt="hinhanh" width="100%"
+                  /></a>
+                  <div class="name_product">
+                    BỘ CÀ PHÊ PHIN - CAMELLIA MÀU CÀ PHÊ
+                  </div>
+                  <div class="cash_product">100.000 đ</div>
+                </div>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+        <div style="text-align: center" class="chuyen">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="./img/logo.png" alt="" class="footer_logo" />
+      <div class="frame_menu">
+        <a href="" style="text-decoration: none"
+          ><h3 class="name_menu">Trang Chủ</h3></a
+        >
+        <a href="./aboutus.html" style="text-decoration: none"
+          ><h3 class="name_menu">Giới Thiệu</h3></a
+        >
+        <a href="./Contact.html" style="text-decoration: none"
+          ><h3 class="name_menu">Liên Hệ</h3></a
+        >
+        <a href="#" style="text-decoration: none"
+          ><h3 class="name_menu">Cửa Hàng</h3></a
+        >
+      </div>
+      <div class="mxh_footer">
+        <a href="https://www.instagram.com/"
+          ><img src="./img/instagram.png" alt="instagram"
+        /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="./img/facebook.png" alt="facebook"
+        /></a>
+        <a href=""><img src="./img/in.png" alt="in" /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="./img/youtube.png" alt="youtube"
+        /></a>
+      </div>
+      <div class="text_footer">
+        © COPYRIGHT SITENAME. ALL RIGHTS RESERVED POWERED by CREATE ECOMMERCE
+      </div>
+    </div>
+  </body>
+</html>

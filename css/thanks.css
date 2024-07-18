@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  margin: 0;
+  padding: 0;
+  color: #f4d58d;
+}
+.mainframe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #15293c;
+}
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+}
+.nav_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.img_logo {
+  width: 96px;
+  height: 96px;
+}
+.nav_menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.nav_list {
+  list-style: none;
+  display: inline-flex;
+}
+.nav_item {
+  color: #f4d58d;
+  padding: 0 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+.nav_icon {
+  display: flex;
+  justify-content: center;
+  column-gap: 32px;
+  cursor: pointer;
+}
+.frame_header {
+  width: 100%;
+  min-height: 600px;
+  height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #15293c;
+  flex-direction: column;
+}
+.text_thank {
+  width: 40%;
+  font-size: 96px;
+  text-align: center;
+}
+.frame_btn {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  margin-top: 32px;
+  justify-content: center;
+}
+.button_frame {
+  width: 85%;
+  padding: 16px;
+  text-align: center;
+  border: 3px solid hsla(42, 82%, 75%, 1);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+.icon_danhmuc {
+  width: 56px;
+  height: 56px;
+}
+@media (max-width: 767px) {
+  .img_logo {
+    width: 56px;
+    height: 56px;
+  }
+  .nav_menu {
+    display: none;
+  }
+  .input_container {
+    display: block;
+  }
+  .text_thank {
+    width: 100%;
+  }
+  .frame_btn {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .img_logo {
+    width: 76px;
+    height: 76px;
+  }
+  .nav_item {
+    font-size: 18px;
+  }
+  .input_container {
+    display: block;
+  }
+  .text_thank {
+    width: 80%;
+  }
+  .frame_btn {
+    width: 50%;
+  }
+  .icon_danhmuc {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .icon_danhmuc {
+    display: none;
+  }
+}
